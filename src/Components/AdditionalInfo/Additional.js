@@ -15,6 +15,7 @@ const Additional = () => {
             setTagsArr(configureTags(mangaInfo));
             setAltTitles(mangaInfo.data.attributes.altTitles);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mangaInfo.load.status]);
 
     return (
