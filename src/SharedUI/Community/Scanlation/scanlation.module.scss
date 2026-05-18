@@ -1,0 +1,56 @@
+.wrapp {
+    display: flex;
+    
+    svg, img {
+        max-width: 1rem;
+        max-height: 1rem;
+        color: #4d4d4d;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapp {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapp {
+        max-width: 120px;
+        text-overflow: ellipsis;
+        
+        p {
+            width: inherit;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-right: 1px;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .wrapp {
+        max-width: 90px;
+        text-overflow: ellipsis;
+        
+        p {
+            max-width: 90px;
+        }
+    }
+}
+
+@media (max-width: 290px) {
+    .wrapp {
+        max-width: 85px;
+    }
+}
+
+
+
+@media (max-width: 260px) {
+    .wrapp {
+        align-items: center;
+    }
+}
+

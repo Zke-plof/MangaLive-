@@ -1,0 +1,56 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Brand gradients -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b30" />
+      <stop offset="50%" stop-color="#ff6740" />
+      <stop offset="100%" stop-color="#ff9500" />
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e24" />
+      <stop offset="100%" stop-color="#0f0f12" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2d55" />
+      <stop offset="100%" stop-color="#ff9500" />
+    </linearGradient>
+    <!-- Premium glow filter -->
+    <filter id="premiumGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Elegant dark background squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#darkGrad)"/>
+  
+  <!-- Subtle inner neon border -->
+  <rect x="12" y="12" width="488" height="488" rx="116" stroke="url(#glowGrad)" stroke-width="4" stroke-opacity="0.3"/>
+
+  <!-- Manga pages background effect -->
+  <path d="M120 370 Q160 380 200 370 T280 370 Q320 380 360 370 V150 Q320 160 280 150 T200 150 Q160 160 120 150 Z" fill="#ffffff" fill-opacity="0.05" />
+
+  <!-- The stylized brand "M" designed like a premium glowing folded manga book -->
+  <!-- Left Wing -->
+  <path d="M120 360 L120 180 C120 160 135 150 150 160 L230 220 C245 230 256 220 256 200 L256 160" 
+        stroke="url(#brandGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" filter="url(#premiumGlow)" />
+  
+  <!-- Right Wing -->
+  <path d="M392 360 L392 180 C392 160 377 150 362 160 L282 220 C267 230 256 220 256 200 L256 160" 
+        stroke="url(#brandGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" filter="url(#premiumGlow)" />
+  
+  <!-- Core central pulse (Pages fold spine) -->
+  <path d="M256 180 V370" stroke="#ffffff" stroke-width="20" stroke-linecap="round" filter="url(#premiumGlow)" />
+  
+  <!-- Decorative dynamic action spark lines (Anime speed lines inspired) -->
+  <path d="M80 220 H100" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.7" />
+  <path d="M70 270 H95" stroke="url(#glowGrad)" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+  <path d="M412 220 H432" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.7" />
+  <path d="M417 270 H442" stroke="url(#glowGrad)" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Sparkling stars (Manga magic elements) -->
+  <!-- Left Star -->
+  <path d="M170 110 L174 118 L182 122 L174 126 L170 134 L166 126 L158 122 L166 118 Z" fill="#ffffff" opacity="0.9" />
+  <!-- Right Star (larger) -->
+  <path d="M340 100 L345 110 L355 115 L345 120 L340 130 L335 120 L325 115 L335 110 Z" fill="url(#brandGrad)" filter="url(#premiumGlow)" />
+</svg>

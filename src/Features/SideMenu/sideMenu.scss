@@ -1,0 +1,114 @@
+.side-menu {
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    height: 100vh;
+    width: fit-content;
+    display: flex;
+    position: fixed;
+    z-index: 1030;
+    background-color: #f8f9fc;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    flex-direction: column;
+    padding: 20px 14px;
+    overflow: hidden;
+    transition: 0.4s all ease;
+}
+
+.links-block {
+    font-size: 14pt;
+
+    .svg-link {
+        font-weight: bold;
+    }
+
+    width: 90%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 10px;
+    
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+    
+    a {
+        padding-left: 20px;
+        font-size: 12pt;
+        width: calc(100% - 20px);
+    }
+    
+    &:last-child {
+        padding-bottom: 50px;
+    }
+}
+
+.link {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    color: #434853;
+    font-weight: 500;
+    height: 1.85rem;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    a {
+        padding-left: 20px;
+        width: calc(100% - 20px);
+        color: inherit;
+    }
+    
+    &:hover {
+        background-color: rgba(255, 103, 64, 0.08);
+        color: #ff6740;
+    }
+}
+
+.active-link {
+    color: white!important;
+    background-color: #ff6740;
+    box-shadow: 0 4px 12px rgba(255, 103, 64, 0.25);
+    border-radius: 6px;
+    
+    &:hover {
+        background-color: #e04f27;
+        color: white!important;
+    }
+}
+
+.a-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu-active {
+    left: 0px;
+    overflow: scroll;
+}
+
+.side-menu-disable {
+    left: -300px;
+    overflow: hidden;
+}
+
+.side-menu-add-block {
+    position: static;
+    min-width: 0px;
+    transition: 0.4s all;
+    z-index: 1000;
+}
+
+.side-menu-block-active {
+    top: 0px;
+    min-width: calc(270px + 7px);
+    transition: 0.4s all;
+}
+
+.side-shadow {
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.2);
+}

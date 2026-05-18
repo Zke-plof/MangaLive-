@@ -1,0 +1,138 @@
+.wrapp {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 1.5rem;
+}
+
+.item {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0.5rem;
+    background-color: #f0f1f2;
+    padding: 1rem;
+    max-height: 80px;
+}
+
+.info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.translation {
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 20px;
+        width: 20px;
+        margin-right: 0.25rem;
+    }
+}
+
+.scanlation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.img_wrapp {
+    height: 80px;
+    min-width: 56px;
+    max-width: 56px;
+    border-radius: 0.25rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.title {
+    font-size: 14pt;
+    font-weight: 550;
+    color: #242424;
+}
+
+@media (max-width: 460px) {
+    .wrapp {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .info {
+        grid-template-rows: auto;
+    }
+
+    .title {
+        font-size: 13pt;
+    }
+
+    .translation, .scanlation {
+        font-size: 11pt;
+    }
+}
+
+@media (max-width: 430px) {
+    .item {
+        padding: .8rem;
+    }
+
+    .title {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 400px) {
+    .item {
+        padding: .6rem;
+    }
+
+    .translation, .scanlation {
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 340px) {
+    .translation, .scanlation {
+        font-size: 9pt;
+    }
+}
+
+@media (max-width: 300px) {
+    .item {
+        padding: .5rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .item {
+        padding: .4rem;
+    }
+
+    .title {
+        font-size: 11pt;
+    }
+
+    .translation, .scanlation {
+        font-size: 8.5pt;
+    }
+}
+
+@media (max-width: 260px) {
+    .item {
+        padding: .4rem;
+    }
+
+    .title {
+        font-size: 10.5pt;
+    }
+
+    .translation, .scanlation {
+        font-size: 7.5pt;
+    }
+
+    .translation {
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        font-size: 14pt;
+        padding: 10px;
+        margin-right: 10px;
+        margin-top: 2px;
+        border-radius: 50%;
+    }
+
+    svg:hover {
+        background-color: rgba($color: #ebebeb, $alpha: 0.7);
+        transition: 0.6s all ease-in-out;
+    }
+}
+
+.logo_side_main {
+    svg {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+    
+    svg:hover {
+        background-color: rgba($color: #b4b9be, $alpha: 0.4);
+    }
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+}
+
+.logoTitle {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #272B30;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.logoLink:hover {
+    .logoTitle {
+        color: #ff6740;
+    }
+    .logoIcon {
+        transform: scale(1.1) rotate(-4deg);
+        filter: drop-shadow(0 4px 12px rgba(255, 103, 64, 0.3));
+    }
+}

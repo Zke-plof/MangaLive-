@@ -1,0 +1,121 @@
+.chapter-page {
+    margin: 20px 20px 0px 20px;
+    display: grid;
+    grid-template-areas: 
+        'chapter-title'
+        'chapter-content';
+    gap: 10px;
+    justify-content: start;
+    grid-template-columns: 1fr;
+}
+
+.chapter-title {
+    p:last-child {
+        user-select: none
+    }
+
+    width: 100%;
+    grid-area: chapter-title;
+    justify-self: start;
+
+    .chapter-name {
+        font-size: 16pt;
+        margin-bottom: 3px;
+    }
+
+    .manga-name {
+        margin-bottom: 17px;
+        font-size: 14pt;
+        color: #ff6740;
+    }
+
+    .translator {
+        font-size: 16pt;
+        font-weight: bold;
+        margin-top: 7px;
+    }
+}
+
+.read-progress-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    div {
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 2px;
+        border-radius: 2px;
+        background-color: #f0f1f2;
+        color: #2f383e;
+        font-weight: bold;
+        font-size: 14pt;
+        cursor: pointer;
+    }
+
+    min-height: 28px;
+}
+
+.chapter-content {
+    width: 100%;
+    grid-area: chapter-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        user-select: none
+    }
+
+    &.scroll-mode {
+        flex-direction: column;
+        max-height: none !important;
+        height: auto !important;
+        align-items: center;
+
+        img {
+            position: relative !important;
+            max-height: none !important;
+            max-width: min(800px, 100%) !important;
+            width: auto !important;
+            height: auto !important;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .chapter-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .read-progress-info div {
+        font-weight: lighter;
+        font-size: 12pt;
+    }
+
+    .translator {
+        font-weight: lighter!important;
+    }
+
+    .chapter-content {
+        min-height: 100vh;
+
+        img {
+            position: absolute;
+            max-height: 100%!important;
+            max-width: 100%!important;
+        }
+    }
+}

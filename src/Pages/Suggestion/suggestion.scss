@@ -1,0 +1,192 @@
+.suggestion-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.suggest-content {
+    width: 91vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 45px;
+    height: 100%;
+    justify-self: flex-start;
+}
+
+.suggest-item {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.suggest-item-content {
+    width: 100%;
+}
+
+// Premium Hero Showcase styling
+.hero-showcase {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(255, 103, 64, 0.05) 0%, rgba(255, 45, 85, 0.02) 100%);
+    border: 1px solid rgba(255, 103, 64, 0.1);
+    border-radius: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 103, 64, 0.05) 0%, transparent 60%);
+        pointer-events: none;
+    }
+}
+
+.hero-tag {
+    background: linear-gradient(135deg, #ff6740 0%, #ff2d55 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 15px rgba(255, 103, 64, 0.25);
+    display: inline-block;
+}
+
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #1e2229;
+    margin-bottom: 12px;
+    
+    span {
+        background: linear-gradient(135deg, #ff6740 0%, #ff2d55 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #5c6470;
+    max-width: 720px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    padding: 28px 24px;
+    border-radius: 14px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    
+    &:hover {
+        transform: translateY(-6px);
+        background: white;
+        border-color: rgba(255, 103, 64, 0.25);
+        box-shadow: 0 12px 30px rgba(255, 103, 64, 0.08);
+        
+        .feature-icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, #ff6740 0%, #ff2d55 100%);
+            color: white;
+            box-shadow: 0 6px 20px rgba(255, 103, 64, 0.3);
+        }
+    }
+}
+
+.feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 103, 64, 0.1);
+    color: #ff6740;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e2229;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+.feature-card-desc {
+    font-size: 0.95rem;
+    color: #68707a;
+    line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-showcase {
+        padding: 30px 16px;
+        margin-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 340px) {
+    .suggest-item {
+        margin-top: 10px;
+    }
+}

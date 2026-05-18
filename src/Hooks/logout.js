@@ -1,0 +1,31 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { setToInitial } from '../Store/Slices/userSlice';
+import MangaDexApi from '../Services/MangaDexApi';
+
+const useLogout = () => {
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.user);
+
+    const logout = async (callback = () => {}) => {
+        try {
+            if (user.sessionToken) {
+                await fetch(`${MangaDexApi.CorsProxy}https://api.mangadex.org/auth/logout`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${user.sessionToken}`
+                    }
+                });
+            }
+        } catch (error) {
+            console.error("Auth logout request failed:", error);
+        } finally {
+            localStorage.removeItem('user');
+            dispatch(setToInitial());
+            callback();
+        }
+    }
+
+    return (callback) => logout(callback);
+};
+
+export default useLogout;

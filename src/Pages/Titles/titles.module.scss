@@ -1,0 +1,13 @@
+.wrapp {
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.container {
+    display: grid;
+    width: 95%;
+    justify-self: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
